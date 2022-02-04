@@ -25,3 +25,35 @@
 #container a {
   text-decoration: none;
 }
+
+p {
+  margin: 1vh 10vw;
+}
+
+h2 {
+  font-size: 1em;
+  font-weight: bolder;
+
+  text-align: center;
+}
+
+.numbers {
+  font-size: 0.8em;
+}
+
+form{
+  text-align: center;
+}
+
+ion-button{
+  margin: 2vh 0;
+
+  width: 40vw;
+}
+
+@media (min-width: 700px) {
+  p, ion-item{
+    margin: 0 30vw;
+  }
+  
+}
