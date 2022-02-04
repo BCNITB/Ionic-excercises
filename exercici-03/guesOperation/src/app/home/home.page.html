@@ -1,23 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Calcula!
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div class="ion-padding">
-    <h2 ng-init="numAleatorio()">Calcula la suma de los siguientes números</h2>
+    <h2 ng-init="numAleatorio()">Calcula la suma dels següents números</h2>
     <p class="numbers">Primer número: {{ num1 }}</p>
-    <!--TODO: Afegeix un segon número -->
-
-    <form>
+    <p class="numbers">Segon número: {{ num2 }}</p>
+    
+    <form *ngIf="!check">
       <ion-item>
         <ion-label position="floating">Valor de la suma</ion-label>
-        <ion-input autofocus="true" clearInput></ion-input>
+        <ion-input autofocus="true" clearInput type="number" min="1" max="200" name="comprueba" [(ngModel)] = "num"></ion-input>
       </ion-item>
-      <ion-button>Comprueba</ion-button>
+      <ion-button (click)="checkAnswer()">Comproba</ion-button>
     </form>
   </div>
+  <ion-card>
+    {{ result }}    
+  </ion-card>
 </ion-content>
