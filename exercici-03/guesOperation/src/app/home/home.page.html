@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <h2 ng-init="numAleatorio()">Calcula la suma de los siguientes números</h2>
+    <p class="numbers">Primer número: {{ num1 }}</p>
+    <!--TODO: Afegeix un segon número -->
+
+    <form>
+      <ion-item>
+        <ion-label position="floating">Valor de la suma</ion-label>
+        <ion-input autofocus="true" clearInput></ion-input>
+      </ion-item>
+      <ion-button>Comprueba</ion-button>
+    </form>
+  </div>
+</ion-content>
