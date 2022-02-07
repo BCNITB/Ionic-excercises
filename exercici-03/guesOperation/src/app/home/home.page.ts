@@ -13,9 +13,7 @@ export class HomePage {
   sum:number;
   
   result:string;
-  resultArray:string[]=["Respuesta correcta", "¡Te has quedado corto!"];
-
-  check:boolean=false;
+  resultArray:string[]=["Respuesta correcta", "T'has quedat curt!"];
 
   constructor() {}
 
@@ -28,12 +26,11 @@ export class HomePage {
 
     if(this.sum == this.num){
       this.result=this.resultArray[0];
-      this.check = true;
-    }
-    else if(this.sum < this.num){
-      this.result=this.resultArray[1];
     }
     else if(this.sum > this.num){
+      this.result=this.resultArray[1];
+    }
+    else if(this.sum < this.num){
       this.result=this.resultArray[2];
     }
   }
