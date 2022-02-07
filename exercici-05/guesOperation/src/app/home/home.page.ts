@@ -34,9 +34,11 @@ export class HomePage {
     }
     else if(this.sum > this.num){
       this.result=this.resultArray[1];
+      this.fail=true;
     }
     else if(this.sum < this.num){
       this.result=this.resultArray[2];
+      this.fail=true;
     }
   }
 
