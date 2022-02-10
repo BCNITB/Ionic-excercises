@@ -19,6 +19,7 @@ export class HomePage {
   fail:boolean=false;
   
   sound:any;
+    
   audio=new Audio();
   audioTime:any;
 
@@ -40,12 +41,12 @@ export class HomePage {
     else if(this.sum > this.num){
       this.result=this.resultArray[1];
       this.fail=true;
-      //TODO: upload de sound file fail.mp3
+      this.sound="../../assets/sounds/fail.mp3";
     }
     else if(this.sum < this.num){
       this.result=this.resultArray[2];
       this.fail=true;
-      //TODO: upload de sound file fail.mp3
+      this.sound="../../assets/sounds/fail.mp3";
     }
 
     this.play(this.sound);
