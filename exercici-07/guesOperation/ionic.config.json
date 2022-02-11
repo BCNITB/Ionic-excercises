@@ -1,0 +1,7 @@
+{
+  "name": "guesOperation",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

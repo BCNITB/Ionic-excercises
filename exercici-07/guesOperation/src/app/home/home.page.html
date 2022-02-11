@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calcula!
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <h2 ng-init="numAleatorio()">Calcula la suma dels següents números</h2>
+    <p class="numbers">Primer número: {{ num1 }}</p>
+    <p class="numbers">Segon número: {{ num2 }}</p>
+    
+    <form *ngIf="!check">
+      <ion-item>
+        <ion-label position="floating" for="checklabel">Valor de la suma</ion-label>
+        <ion-input autofocus="true" clearInput type="number" min="1" max="200" name="checklabel" [(ngModel)] = "num"></ion-input>
+      </ion-item>
+      <ion-button (click)="checkAnswer()">Comprova</ion-button>
+    </form>
+  </div>
+  <ion-card>
+    <ion-card-content>
+      <ion-card-header>
+        <ion-card-title>
+          {{ result }}
+        </ion-card-title>
+      </ion-card-header>
+
+      <div *ngIf="check">
+        <div style="width:100%;height:0;padding-bottom:45%;position:relative;">
+          <span class="hidden">Animació de victòria</span>
+          <iframe src="https://giphy.com/embed/MOWPkhRAUbR7i" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        </div>
+        <p class="score">
+          Has necessitat {{ count }} {{ word }}.
+        </p>
+        <p [ngClass]="{'good': count==1, 'bad': count>1}" class="message">
+          {{ msg }}
+        </p>
+      </div>
+    </ion-card-content>
+    
+    
+    <div *ngIf="fail" style="width:100%;height:0;padding-bottom:62%;position:relative;"><iframe src="https://giphy.com/embed/Ly6FB6xRSJlW8" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+    <!--<p><a href="https://giphy.com/gifs/minions-Ly6FB6xRSJlW8">via GIPHY</a></p>
+    <p>
+      <a href="https://giphy.com/gifs/excited-applause-minions-MOWPkhRAUbR7i">via GIPHY
+
+    </a>
+    </p>-->
+  </ion-card>
+</ion-content>
