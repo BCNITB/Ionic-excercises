@@ -59,6 +59,15 @@ ion-button{
   color: red;
 }
 
+.score{
+  text-align: center;
+  
+  font-size: 2em;
+  font-weight: bolder;
+
+  color: black;
+}
+
 @media (min-width: 700px) {
   p, ion-item{
     margin: 0 30vw;

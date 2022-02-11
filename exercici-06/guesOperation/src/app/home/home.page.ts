@@ -11,9 +11,11 @@ export class HomePage {
   num1:number = this.randomNum(0,100);
   num2:number = this.randomNum(0,100);
   sum:number;
+  count:number=0;
   
   result:string;
   resultArray:string[]=["Resposta correcta", "T'has quedat curt!", "T'has passat de llarg!"];
+  word:string="";
 
   check:boolean=false;
   fail:boolean=false;
@@ -37,19 +39,29 @@ export class HomePage {
       this.check=true;
       this.fail=false;
       this.sound="../../assets/sounds/correct.mp3";
+      ++this.count;
     }
     else if(this.sum > this.num){
       this.result=this.resultArray[1];
       this.fail=true;
       this.sound="../../assets/sounds/fail.mp3";
+      // TODO: increase count variable adding 1 point
     }
     else if(this.sum < this.num){
       this.result=this.resultArray[2];
       this.fail=true;
       this.sound="../../assets/sounds/fail.mp3";
+      // TODO: increase count variable adding 1 point
     }
 
     this.play(this.sound);
+
+    if(this.count>1){
+      this.word="intents";
+    }
+    else{
+      this.word="intent";
+    }
   }
 
   calculateSum() {
