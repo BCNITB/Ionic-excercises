@@ -8,14 +8,14 @@
 
 <ion-content [fullscreen]="true">
   <div class="ion-padding">
-    <h2 ng-init="numAleatorio()">Calcula la suma dels següents números</h2>
+    <h2 ng-init="numAleatorio()">Calcula el producte dels següents números</h2>
     <p class="numbers">Primer número: {{ num1 }}</p>
     <p class="numbers">Segon número: {{ num2 }}</p>
     <p *ngIf="count > 0" class="numbers">N<span class="hidden">ombre</span> Intents: {{ count }}</p>
     
     <form *ngIf="!check && count < 5">
       <ion-item>
-        <ion-label position="floating" for="checklabel">Valor de la suma</ion-label>
+        <ion-label position="floating" for="checklabel">Valor del producte</ion-label>
         <ion-input autofocus="true" clearInput type="number" min="1" max="200" name="checklabel" [(ngModel)] = "num"></ion-input>
       </ion-item>
       <ion-button (click)="checkAnswer()">Comprova</ion-button>
