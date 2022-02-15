@@ -108,4 +108,12 @@ export class HomePage {
 
     this.audio.pause();
   }
+
+  newGame(){
+    this.num=null;
+    this.num1=this.randomNum(0,100);
+    this.num2=this.randomNum(0,100);
+
+    // TODO: Add the remaining variables to restart the game.
+  }
 }

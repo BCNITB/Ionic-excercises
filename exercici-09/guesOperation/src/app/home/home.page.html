@@ -13,17 +13,19 @@
     <p class="numbers">Segon número: {{ num2 }}</p>
     <p *ngIf="count > 0" class="numbers">N<span class="hidden">ombre</span> Intents: {{ count }}</p>
     
-    <form *ngIf="!check">
+    <form *ngIf="!check && count < 5">
       <ion-item>
         <ion-label position="floating" for="checklabel">Valor de la suma</ion-label>
         <ion-input autofocus="true" clearInput type="number" min="1" max="200" name="checklabel" [(ngModel)] = "num"></ion-input>
       </ion-item>
       <ion-button (click)="checkAnswer()">Comprova</ion-button>
     </form>
+
+    <!-- TODO: Insert the new button here -->
   </div>
   <ion-card>
     <ion-card-content>
-      <ion-card-header>
+      <ion-card-header *ngIf="count < 5">
         <ion-card-title>
           {{ result }}
         </ion-card-title>
