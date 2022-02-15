@@ -1,0 +1,124 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+p {
+  margin: 1vh 10vw;
+}
+
+h2 {
+  font-size: 1em;
+  font-weight: bolder;
+
+  text-align: center;
+}
+
+.numbers {
+  font-size: 0.8em;
+}
+
+form{
+  text-align: center;
+}
+
+ion-button{
+  margin: 2vh 0;
+
+  width: 40vw;
+}
+
+.txt-center {
+  text-align: center;
+
+  font-size: 1.25em;
+  font-weight: 800;
+  color: red;
+}
+
+ion-card-title{
+  text-align: center;
+
+  font-size: 1.45em;
+}
+
+.score{
+  text-align: center;
+  
+  font-size: 1.2em;
+  font-weight: bold;
+
+  color: black;
+}
+
+.message {
+  text-align: center;
+
+  font-size: 1.5em;
+
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:parpadeo;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+  
+@-moz-keyframes parpadeo{  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes parpadeo {  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes parpadeo {  
+  0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+.good{
+  color: navy;
+}
+
+.bad {
+  color: red;
+}
+
+@media (min-width: 700px) {
+  p, ion-item{
+    margin: 0 30vw;
+  }
+  
+}
