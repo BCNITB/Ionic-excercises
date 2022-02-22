@@ -1,0 +1,95 @@
+<!doctype html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="description" content="Pàgina web per a crear una aplicació Ionic pas a pas">
+        <meta name="keywords" content="Ionic App pas a pas">        
+        <meta name="author" content="GACS">
+        
+        <title>Ionic - Exercici 6</title>
+    </head>
+
+    <body>
+        <ul style="list-style: none; padding: 0; margin: 0 15vw; padding: 1vh 0; z-index: 100;">
+            <li style="visibility: hidden; float: left; margin: 0 0.15em;"><a href="#container" title="Anar al contingut" style="height: 2em; line-height: 2; float: left; width: 9em; display: block; text-decoration:none; text-align: none;">Anar al contingut</a></li>
+            <li style="float: left; margin: 0 0.15em; background-color: yellow; padding: 0.5vh 1vw; color: red; font-weight: bold;">Català</li>
+            <li style="float: left; margin: 0 0.15em; padding: 0.5vh 1vw; "><a href="../es/ex06.html" title="Ver el ejercicio en castellano" style="text-decoration: none; color: black;">Castellano</a></li>
+            <li style="float: left; margin: 0 0.15em; padding: 0.5vh 1vw;"><a href="../en/ex06.html" title="Read the  exercise in english" style="text-decoration: none; color: black;">English</a></li>
+        </ul>
+
+        <article style="background-color: #fae6fa;; width: 70vw; margin: 0 15vw; font-size: 1.5em;" name="container;">
+            <section style="margin: 0 2vw; padding-bottom: 1vh;">
+                <h1 style="padding: 1vh 0;">Exercici 6</h1>
+                <p>
+                    L’aplicació ja està gairebé finalitzada. Podem fer-la una mica més atractiva si incluïm un marcador on es vagin sumant el nombre d’intents per a fer que 
+                    l’usuari intenti millorar la seva marca. 
+                </p>
+                <div>
+                    <h2>Descricpció de l'aplicació</h2>
+                    <p>
+                        L’aplicació per a realitzar l’exercici es pot descarregar, com sempre, al 
+                        <a href="https://github.com/BCNITB/Ionic-excercises/tree/main/exercici-06/guesOperation" title="Anar al repositori" 
+                        target="_blank" style="text-decoration: none;">repositori de github de bcnitb</a> i si l’executem veurem que ens mostra un marcador quan
+                        introduïm el resultat correcte.
+                    </p>
+                    <div style="text-align: center; width: 70vw; margin: auto;">
+                        <img src="../img/ex6.png" alt="" style="width: 30vw;">
+                    </div>
+                </div>
+                <div>
+                    <h2>Conceptes</h2>
+                    <p>
+                        En aquest cas s’ha afegit una nova variable anomenada <b lang="en-EN">count</b> que ens servirà per a emmagatzemar el nombre d’intents que ha realitzat 
+                        l’usuari fins aconseguir realitzar l’operació de forma correcte. Aquesta variable es pot trobar a sota de les variables numèriques de l’aplicació.
+                    </p>
+                    <div style="width: 100%; background-color: #000; text-align: center;">
+                        <code style="font-size: 1.5em; color: white;">
+                            count:number=0;
+                        </code>
+                    </div>
+                    <p>
+                        A l’aplicació ara mateix només es modifica la variable si el valor introduït és el correcte i es fa de la següent manera:
+                    </p>
+                    <div style="width: 100%; background-color: gray; text-align: center;">
+                        <code style="font-size: 1.5em; color: #000;">
+                            ++this.count;
+                        </code>
+                    </div>
+                    <p>
+                        A la línia superior estem indicant que a la variable count se li sumi un 1. Aquest codi també es podria escriure com:
+                    </p>
+                    <div style="width: 100%; background-color: #000; text-align: center;">
+                        <code style="font-size: 1.5em; color: white;">
+                            this.count=this.count+1;
+                        </code>
+                    </div>
+                    <p>
+                        Que poder és una forma més clara d’escriure’l; encara que a la programació es tendeix a compactar el codi sempre que es pot.
+                    </p>
+                    <p>
+                        Ens hem de fixar que la modificació de la variable es realitza dins del bucle <B lang="en-EN">if</B> que cumpleix la condició
+                        <b>this.sum == this.num</b>.
+                    </p>
+                </div>
+                <div>
+                    <h2>Exercici</h2>
+                    <p>
+                        L’exercici que es proposa és que el comptador també tingui en consideració quan s’ha introduït un valor erroni per la suma; ja que ara mateix només té 
+                        en consideració quan s’introdueix el valor correcte i estem falsejant el resultat real.
+                    </p>
+                </div>
+            </section>
+        </article>
+
+        <div style="width: 65vw; margin: auto;">
+            <a href="ex05.html" style="text-decoration: none; background-color: blue; color: white; padding: 1vh 2vw; float: left; margin: 2vh 0;" title="Anar a l'exercici anterior">
+                Anterior
+            </a>
+               
+            <a href="ex07.html" style="text-decoration: none; background-color: blue; color: white; padding: 1vh 2vw; float: right; margin: 2vh 0;" title="Anar a l'exercici següent">
+                Següent
+            </a>
+        </div>
+    </body>
+</html>

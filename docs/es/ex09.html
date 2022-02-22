@@ -1,0 +1,107 @@
+<!doctype html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="description" content="Pàgina web per a crear una aplicació Ionic pas a pas">
+        <meta name="keywords" content="Ionic App pas a pas">        
+        <meta name="author" content="GACS">
+        
+        <title>Ionic - Exercici 9</title>
+    </head>
+
+    <body>
+        <ul style="list-style: none; padding: 0; margin: 0 15vw; padding: 1vh 0; z-index: 100;">
+            <li style="visibility: hidden; float: left; margin: 0 0.15em;"><a href="#container" title="Anar al contingut" style="height: 2em; line-height: 2; float: left; width: 9em; display: block; text-decoration:none; text-align: none;">Anar al contingut</a></li>
+            <li style="float: left; margin: 0 0.15em; background-color: yellow; padding: 0.5vh 1vw; color: red; font-weight: bold;">Català</li>
+            <li style="float: left; margin: 0 0.15em; padding: 0.5vh 1vw; "><a href="../es/ex09.html" title="Ver el ejercicio en castellano" style="text-decoration: none; color: black;">Castellano</a></li>
+            <li style="float: left; margin: 0 0.15em; padding: 0.5vh 1vw;"><a href="../en/ex09.html" title="Read the  exercise in english" style="text-decoration: none; color: black;">English</a></li>
+        </ul>
+
+        <article style="background-color: #fae6fa;; width: 70vw; margin: 0 15vw; font-size: 1.5em;" name="container;">
+            <section style="margin: 0 2vw; padding-bottom: 1vh;">
+                <h1 style="padding: 1vh 0;">Exercici 9</h1>
+                <p>
+                    Ara mateix l’aplicació ja funciona, però quan finalitzem la partida, és a dir, fem més de 5 intents sense encertar o encertem el resultat, ens desapareix el 
+                    botó <b>Comprova</b> i no podem fer res més. Això és un inconvenient si volem torna a intentar-ho.
+                </p>
+                <p>
+                    Per això, a aquest exercici crearem un nou botó que es mostrarà quan s'acabi el joc i d’aquesta forma poder tornar a intentar a jugar.
+                </p>
+                <div>
+                    <h2>Descricpció de l'aplicació</h2>
+                    <p>
+                        Si descarreguem l’aplicació del <a href="https://github.com/BCNITB/Ionic-excercises/tree/main/exercici-09/guesOperation" 
+                        alt="Anar al repositori per a descarregar l'exercici 9" target="_blank" style="text-decoration: none;">
+                            repositori de bcnitb</a>  veurem que l’aplicació és tal i com l’hem deixat a l’exercici anterior i que només s’ha afegit un so en cas de que hàgim perdut o 
+                            guanyat la partida.
+                    </p>
+                </div>
+                <div>
+                    <h2>Conceptes</h2>
+                    <p>
+                        Per aquest exercici s'ha creat una funció anomenada <b>newGame( )</b>. Aquesta funció es pot observer al final de l'arxiu <b>home.page.ts</b> i la seva funció és 
+                        reiniciar les variables de l'aplicació.
+                    </p>
+                    <p>
+                        Per a reiniciar una variable el que s'ha de fer és assignar-li el valor inicial a la variable al pitjar sobre el botó que estigui enllaçat amb la dunció. Un exemple
+                        de reinici de dues variables es pot veure a les següent línies.
+                    </p>
+                    <div style="width: 100%; background-color: #000; padding: 0 3vw;">
+                        <code style="font-size: 1.5em; color: white;">
+                            <p style="padding: 0 3vw;">newGame(){</p>
+                                <p style="padding: 0 5vw;">this.num=null;</p>
+                                <p style="padding: 0 5vw;">this.num1=this.randomNum(0,100);</p>
+                                <p style="padding: 0 3vw;">this.num2=this.randomNum(0,100);</p>
+                            <p style="padding: 0 3vw;">}</p>
+                        </code>
+                    </div>
+                    <p>
+                        Com es port observar, el reinici de variables es molt semblant a la declaració d'una variable però sense marcar la seva tipología.
+                    </p>
+                </div>
+                <div>
+                    <h2>Exercici</h2>
+                    <p>
+                        En aquest cas farem 3 exercicis per a poder desenvolupar tot el que cal per a finalitzar l’aplicació.
+                    </p>
+                    <h3>Primera part</h3>
+                    <p>
+                        El primer de tot serà la creació d’un botó que anomenarem <b>Reiniciar</b>. Per a fer aquest nou botó haurem d’obrir l’arxiu <b>home.page.html</b> i 
+                        mirar el codi del botó que hi ha al formulari. Aquest botó haurà de crida a una funció anomenada <b>newGame( )</b>.
+                    </p>
+                    <h3>Segona part</h3>
+                    <p>
+                        Si executem l’aplicació veurem que el botó apareix sempre en pantalla; no està malament donar l’opció de reiniciar la partida quan es vulgui; però al 
+                        tenir només 5 intents, seria millor que aquest botó només aparegui quan es finalitza la partida. Per tant, s’ha d’incloure un atribut <b>*ngIf</b> a 
+                        l’etiqueta.
+                    </p>
+                    <p>
+                        Penseu en quina ha de ser la condició o condicions per que es mostri el botó al finalitzar la partida.
+                    </p>
+                    <h3>Tercera part</h3>
+                    <p>
+                        La darrera part d’aquest exercici es realitzarà a l’arxiu <b>home.page.ts</b>. A aquest fitxer veurem que hi ha una funció anomenada <b>newGame( )</b> al
+                        final de l’arxiu. Aquesta funció reinicia totes les variables al seu valor d'inici, però està inacabada. El que s’ha de fer és reiniciar les variables que
+                        manquen.
+                    </p>
+                </div>
+            </section>
+
+            <p style="padding-bottom: 1vw;">
+                La sol·lució de l'excerci es pot descarregar desde el <a href="https://github.com/BCNITB/Ionic-excercises/tree/main/exercici-10/guesOperation" title="Anar a la web per descarregar la sol·lució" target="_blant" 
+                style="text-decoration: none;">repositori de bcnitb</a>.
+            </p>
+        </article>
+
+        <div style="width: 65vw; margin: auto;">
+            <a href="ex08.html" style="text-decoration: none; background-color: blue; color: white; padding: 1vh 2vw; float: left; margin: 2vh 0;" title="Anar a l'exercici anterior">
+                Anterior
+            </a>
+               
+            <a href="ap01.html" style="text-decoration: none; background-color: blue; color: white; padding: 1vh 2vw; float: right; margin: 2vh 0;" title="Anar a l'Apèndix 1">
+                Apèndix 1
+            </a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="description" content="Pàgina web per a crear una aplicació Ionic pas a pas">
+        <meta name="keywords" content="Ionic App pas a pas">        
+        <meta name="author" content="GACS">
+        
+        <title>Ionic - Exercici 4</title>
+    </head>
+
+    <body>
+        <ul style="list-style: none; padding: 0; margin: 0 15vw; padding: 1vh 0; z-index: 100;">
+            <li style="visibility: hidden; float: left; margin: 0 0.15em;"><a href="#container" title="Anar al contingut" style="height: 2em; line-height: 2; float: left; width: 9em; display: block; text-decoration:none; text-align: none;">Anar al contingut</a></li>
+            <li style="float: left; margin: 0 0.15em; background-color: yellow; padding: 0.5vh 1vw; color: red; font-weight: bold;">Català</li>
+            <li style="float: left; margin: 0 0.15em; padding: 0.5vh 1vw; "><a href="../es/ex04.html" title="Ver el ejercicio en castellano" style="text-decoration: none; color: black;">Castellano</a></li>
+            <li style="float: left; margin: 0 0.15em; padding: 0.5vh 1vw;"><a href="../en/ex04.html" title="Read the  exercise in english" style="text-decoration: none; color: black;">English</a></li>
+        </ul>
+
+        <article style="background-color: #fae6fa;; width: 70vw; margin: 0 15vw; font-size: 1.5em;" name="container;">
+            <section style="margin: 0 2vw; padding-bottom: 1vh;">
+                <h1 style="padding: 1vh 0;">Exercici 4</h1>
+                <p>
+                    En aquest quart exercici farem que aparegui un dibuix amb la frase quan la resposta és incorrecte, per a donar una sortida gràfica al usuari. Com sempre, 
+                    farem que la imatge sigui accessible, encara que en aquest cas la imatge serà decorativa i podríem evitar que el lector de pantalla la tingués en conte.
+                </p>
+                <div>
+                    <h3>Descricpció de l'aplicació</h3>
+                    <p>
+                        Per a fer l’exercici descarregarem el codi inicial del <a href="https://github.com/BCNITB/Ionic-excercises/tree/main/exercici-04/guesOperation" 
+                        title="Obrir el repositori per descarregar l'exercici 4" target="_blank" style="text-decoration: none;">repositori de github de bcnitb</a> i executarem l’aplicació per a veure el seu 
+                        aspecte.
+                    </p>
+                    <div style="text-align: center; width: 70vw; margin: auto;">
+                        <img src="../img/ex4.png" alt="" style="width: 30vw;">
+                    </div>
+                </div>
+                <div>
+                    <h3>Conceptes</h3>
+                    <p>
+                        Per fer que el formulari on introduir el valor de la suma desaparegui al introduir el valor correcte, s’han realitzat modificacions als arxius 
+                        <b>home.page.html</b> i <b>home.page.ts</b>.
+                    </p>
+                    <p>
+                        A l’arxiu <p>home.page.html</p> s’ha inclòs dins la etiqueta <b lang="en-EN">form</b> la propietat <b>*ngIf</b>. Aquesta propietat realitza la mateixa 
+                        funció que el bucle <b lang="en-EN">if</b> que hem vist a l’exercici anterior. En aquest cas li hem dit a la propietat que el formulari ha de ser 
+                        visible quan la variable <b lang="en-EN">check</b> sigui <b lang="en-EN">false</b>.
+                    </p>
+                    <div style="width: 100%; background-color: #000; text-align: center;">
+                        <code style="font-size: 1.5em; color: white;">
+                            &lt;form *ngIf="!check"&gt; &lt;/form&gt;                               
+                        </code>
+                    </div>
+                    <p>
+                        Per mostrar la imatge s’ha inclòs una nova línia a sota del missatge de text amb una propietat <b>*ngIf</b>. Aquesta línia és la que mostra l’animació 
+                        quan s’encerta el resultat. L’animació que s’ha utilitzat és una animació lliure de la web <b><a href="https://giphy.com/" title="Obrir la web de giphy" 
+                        target="_blank" style="text-decoration: none;">giphy</a></b>.
+                    </p>
+                    <p>
+                        El codi per mostrar l'animació a la vista es mostra a les següent línies.
+                    </p>
+                    <div style="width: 100%; background-color: #000;">
+                        <code style="font-size: 1.5em; color: white;">
+                            <p style="padding:0 3vw;">&lt;div *ngIf="check" style="width:100%;height:0;padding-bottom:45%;position:relative;"&gt;</p>
+                                <p style="padding:0 5vw;">&lt;span class="hidden"&gt;Animació de victòria&lt;/span&gt;
+                                &lt;iframe src="https://giphy.com/embed/MOWPkhRAUbR7i" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;</p>
+                                <p style="padding:0 3vw;">&lt;div&gt;</p>
+                        </code>
+                    </div>
+                    <p>
+                        És al fitxer <b>home.page.ts</b> on es controla el valor de la variable <b lang="en-EN">check</b>, aquesta variable només pot ser <b lang="en-EN">true</b>
+                        o <b lang="en-EN">false</b>. Com es pot veure a la funció <b lang="en-EN">checkAnswer( )</b> la variable <b lang="en-EN">check</b> modifica el seu valor 
+                        quan s’introdueix el valor correcte.
+                    </p>
+                    <div style="width: 100%; background-color: #000;">
+                        <code style="font-size: 1.5em; color: white;">
+                            <li style="list-style: none;">
+                                <ul style="padding-left: 3vw;">if(this.sum == this.num){</ul>
+                                <ul style="padding-left: 5vw;">this.result=this.resultArray[0];</ul>
+                                <ul style="padding-left: 5vw;">this.check=true;</ul>
+                                <ul style="padding-left: 3vw;">}</ul>
+                        </code>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Exercici</h3>
+                    <p>
+                        En cas de que no s’introdueixi el valor correcte no hi ha cap animació i només es mostra el missatge, cosa que hem aconseguit a l’exercici anterior.
+                    </p>
+                    <p>
+                        Per realitzar aquest exercici s’ha de seguir els següents passos:
+                    </p>
+                    <li>
+                        <ol>Crear una nova variable fail de tipus boolean, com la variable <b>check</b>.</ol>
+                        <ol>Modificar el valor de la variable <b lang="en-EN">fail</b> a la funció <b>checkAnswer( )</b>.</ol>
+                        <ol>Utilitzar la propietat <b>*ngIf</b> per mostrar/amagar l’animació.</ol>
+                    </li>
+                    <p>
+                        Es recomana copiar el codi on es mostra l’animació de victòria i modificar l’enllaç que es mostra dins de <b>src 
+                        (src="https://giphy.com/embed/MOWPkhRAUbR7i")</b>, on s’hauria d’introduir una nova adreça web. Es proposa l’adreça 
+                        <b>https://giphy.com/embed/Ly6FB6xRSJlW8</b>.
+                    </p>
+                    <p>
+                        Si hem realitzat l’excreció de forma correcta haurem d’obtenir el resultat de la Figura  8 si introduïm un valor erroni.
+                    </p>
+                    <div style="text-align: center; width: 70vw; margin: auto;">
+                        <img src="../img/ex4-sol.png" alt="" style="width: 30vw;">
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <div style="width: 65vw; margin: auto;">
+            <a href="ex03.html" style="text-decoration: none; background-color: blue; color: white; padding: 1vh 2vw; float: left; margin: 2vh 0;" title="Anar a l'exercici anterior">
+                Anterior
+            </a>
+        
+
+        
+            <a href="ex05.html" style="text-decoration: none; background-color: blue; color: white; padding: 1vh 2vw; float: right; margin: 2vh 0;" title="Anar a l'exercici següent">
+                Següent
+            </a>
+        </div>
+    </body>
+</html>

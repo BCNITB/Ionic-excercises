@@ -1,0 +1,125 @@
+<!doctype html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="description" content="Flatfy Free Flat and Responsive HTML5 Template ">
+        <meta name="author" content="">
+
+        <title>Flatfy – Free Flat and Responsive HTML5 Template</title>
+    </head>
+
+    <body>
+        <ul style="list-style: none; padding: 0; margin: 0 15vw; padding: 1vh 0; z-index: 100;">
+            <li style="visibility: hidden; float: left; margin: 0 0.15em;"><a href="#container" title="Anar al contingut" style="height: 2em; line-height: 2; float: left; width: 9em; display: block; text-decoration:none; text-align: none;">Anar al contingut</a></li>
+            <li style="float: left; margin: 0 0.15em; background-color: yellow; padding: 0.5vh 1vw; color: red; font-weight: bold;">Català</li>
+            <li style="float: left; margin: 0 0.15em; padding: 0.5vh 1vw; "><a href="../es/ex07.html" title="Ver el ejercicio en castellano" style="text-decoration: none; color: black;">Castellano</a></li>
+            <li style="float: left; margin: 0 0.15em; padding: 0.5vh 1vw;"><a href="../en/ex07.html" title="Read the  exercise in english" style="text-decoration: none; color: black;">English</a></li>
+        </ul>
+
+        <article style="background-color: #fae6fa;; width: 70vw; margin: 0 15vw; font-size: 1.5em;" name="container;">
+            <section style="margin: 0 2vw; padding-bottom: 1vh;">
+                <h1 style="padding: 1vh 0;">Exercici 7</h1>
+                <p>
+                    Gairebé ja tenim l’aplicació llesta; només ens caldria afegir dues coses més per a fer-la més atractiva motivant a l’usuari.
+                </p>
+                <div>
+                    <h2>Descricpció de l'aplicació</h2>
+                    <p>
+                        Si descarreguem l’aplicació del <a href="https://github.com/BCNITB/Ionic-excercises/tree/main/exercici-07/guesOperation" title="Anar al repositori" 
+                        target="_blank" style="text-decoration: none;">repositori de github de bcnitb</a> i l’executem veurem que ens mostra un missatge motivador quan introduïm 
+                        el resultat correcte. En cas de que encertem a la primera ens sortirà un missatge, i si necessitem dos intents el missatge serà un altre diferent.
+                    </p>
+                    <div style="text-align: center; width: 70vw; margin: auto;">
+                        <img src="../img/ex7.png" alt="" style="width: 30vw;">
+                    </div>
+                </div>
+                <div>
+                    <h2>Conceptes</h2>
+                    <p>
+                        Si obrim el fitxer amb el codi de <b>TypeScript</b> (<b>home.page.ts</b>) veurem que s’han creat dues variables nomes de tipus string. Aquesta variables 
+                        son <b>msg</b> i <b>msgArray</b>.
+                    </p>
+                    <div style="width: 100%; background-color: gray; padding: 0 3vw;">
+                        <code style="font-size: 1.5em; color: #000;">
+                            <p>msg:string;</p>
+                            <p>msgArray:string[]=["Quin crack!", "Gairebé perfecte!"];</p>
+                        </code>
+                    </div>
+                    <p>
+                        La primera variable serà la que contingui el text a mostrar per pantalla depenent de la puntuació obtinguda o la segona és un <b>array</b> on 
+                        s’emmagatzemen tots els valors possibles de la variable <b>msg</b>.
+                    </p>
+                    <p>
+                        Per consignar els diferents valors de la variable <b>msg</b> s’ha creat un bucle de tipus <b lang="en-EN">switch</b>. Aquest bucle és molt similar al
+                        bucle <b lang="en-EN">if</b> que es va veure a l'Exercici 3. La diferència és que en un bucle <b lang="en-N">switch</b> la comparació es realitza dins 
+                        el mateix bucle.
+                    </p>
+                    <div style="width: 100%; background-color: gray;">
+                        <code style="font-size: 1.5em; color: #000;">
+                            <p style="padding: 0 3vw;">switch(this.count){</p>
+                                <p style="padding: 0 5vw;">case 1:</p>
+                                    <p style="padding: 0 7vw;">this.msg=this.msgArray[0];</p>
+                                    <p style="padding: 0 7vw;">break;</p>
+                                <p style="padding: 0 5vw;">case 2:</p>
+                                    <p style="padding: 0 7vw;">this.msg=this.msgArray[1];</p>
+                                    <p style="padding: 0 7vw;">break;</p>
+                                <p style="padding: 0 5vw;">default:</p>
+                                    <p style="padding: 0 7vw;">this.msg="oooops!";</p>
+                                    <p style="padding: 0 7vw;">break;</p>
+                            <p style="padding: 0 3vw;">}</p>
+                        </code>
+                    </div>
+                    <p>
+                        En el bucle que s’acaba de mostrar es dius que la condició és el valor de la variable <b lang="en-EN">count</b>, i que depenent d’aquest valor s’executi 
+                        un cas (<b lang="en-EN">case</b>) o un altre, i si no es compleix cap cas llavors s’executi el cas per defecte (<b lang="en-EN">default</b>).
+                    </p>
+                    <p>
+                        Com es pot veure, en aquest tipus de bucle no hi ha cap signe d’equivalència.
+                    </p>
+                    <p>
+                        A banda d’això, també s’ha modificat l’arxiu de la part visual de l’aplicació: <b>home.page.html</b>, on s’han creat dues noves classes i s’ha fet que 
+                        el text es mostri d’un color o un altre depenent del valor de la variable <b lang="en-EN">count</b>. Per realitzar aquesta tasca s’ha utilitzar la 
+                        propietat <b>[ngClass]</b>.
+                    </p>
+                    <div style="width: 100%; background-color: #000; text-align: center;">
+                        <code style="font-size: 1.5em; color: white;">
+                            <p> &lt;p [ngClass]="{'good': count==1, 'bad': count>1}" class="message"&gt;
+                                {{ msg }}
+                                &lt;/p&gt;
+                            </p>
+                        </code>
+                    </div>
+                    <p>
+                        A les línies superior es diu que en cas que la variable <b lang="en-EN">count</b> valgui 1, s’utilitzi la classe <b lang="en-EN">good</b> de la fulla 
+                        d’estils i que si es superior a 1 s’utilitzi la classe <b lang="en-EN">bad</b>.
+                    </p>
+                </div>
+                <div>
+                    <h2>Exercici</h2>
+                    <p>
+                        En aquest exercici es demanen dues coses, així que haurem de retocar dos arxius diferents.
+                    </p>
+                    <h3>Primera part</h3>
+                    <p>
+                        En aquest primer apartat crearem fins a 3 missatges diferents per obtenir un total de 5 respostes depenen de la puntuació de l’usuari.
+                    </p>
+                    <h3>Segona part</h3>
+                    <p>
+                        En cas de que hagin calgut més de 3 intents per a introduir el valor correcte es mostrarà la classe <b lang="en-EN">bad</b>.
+                    </p>
+                </div>
+            </section>
+        </article>
+
+        <div style="width: 65vw; margin: auto;">
+            <a href="ex06.html" style="text-decoration: none; background-color: blue; color: white; padding: 1vh 2vw; float: left; margin: 2vh 0;" title="Anar a l'exercici anterior">
+                Anterior
+            </a>
+               
+            <a href="ex08.html" style="text-decoration: none; background-color: blue; color: white; padding: 1vh 2vw; float: right; margin: 2vh 0;" title="Anar a l'exercici següent">
+                Següent
+            </a>
+        </div>
+    </body>
+</html>
