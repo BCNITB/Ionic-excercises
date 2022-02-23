@@ -12,30 +12,30 @@
 
     <body>
         <ul style="list-style: none; padding: 0; margin: 0 15vw; padding: 1vh 0; z-index: 100;">
-            <li style="visibility: hidden; float: left; margin: 0 0.15em;"><a href="#container" title="Anar al contingut" style="height: 2em; line-height: 2; float: left; width: 9em; display: block; text-decoration:none; text-align: none;">Anar al contingut</a></li>
-            <li style="float: left; margin: 0 0.15em; background-color: yellow; padding: 0.5vh 1vw; color: red; font-weight: bold;">Català</li>
-            <li style="float: left; margin: 0 0.15em; padding: 0.5vh 1vw; "><a href="../es/ex02.html" title="Ver el ejercicio en castellano" style="text-decoration: none; color: black;">Castellano</a></li>
+            <li style="visibility: hidden; float: left; margin: 0 0.15em;"><a href="#container" title="Ir al contenido" style="height: 2em; line-height: 2; float: left; width: 9em; display: block; text-decoration:none; text-align: none;">Anar al contingut</a></li>
+            <li style="float: left; margin: 0 0.15em; padding: 0.5vh 1vw;"><a href="../cat/ex02.html" title="Ver el ejercicio en castellano" style="text-decoration: none; color: black;">Català</a></li>
+            <li style="float: left; margin: 0 0.15em; padding: 0.5vh 1vw; background-color: red; color: yellow; font-weight: bold;">Castellano</li>
             <li style="float: left; margin: 0 0.15em; padding: 0.5vh 1vw;"><a href="../en/ex02.html" title="Read the  exercise in english" style="text-decoration: none; color: black;">English</a></li>
         </ul>
 
         <article style="background-color: #fae6fa;; width: 70vw; margin: 0 15vw; font-size: 1.5em;" name="container;">
             <section style="margin: 0 2vw; padding-bottom: 1vh;">
-                <h1 style="padding: 1vh 0;">Exercici 2</h1>
+                <h1 style="padding: 1vh 0;">Ejercicio 2</h1>
                 <p>
-                    En aquest segon exercici farem una petita aplicació on el jugador haurà de calcular el resultat d’una operació matemàtica amb dos nombres que es generaran 
-                    de forma aleatòria per la aplicació.
+                    En este segundo ejercicio heremos una pequeña aplicacióm donde el jugador tendrá que calcular el resultado de una operación matemática con dos números que se generaran 
+                    de forma aleatoria por la aplicación.
                 </p>
                 <p>
-                    Així doncs crearem una aplicació anomenada <b>guessOperation</b> per a començar a fer l’aplicació. L’esquelet de l’aplicació es pot descarregar des del 
-                    <a href="https://github.com/BCNITB/Ionic-excercises/tree/main/exercici-02/guesOperation" title="Anar al repositori" target="_blank" style="text-decoration: none;">repositori de bcnitb</a>. En cas 
-                    de que es volgui veure pas a pas com crear aquest esquelet i tots els passos donats fins a aquest punt, es recomana la seüent pàgina web: 
-                    <a href="https://TODO: web pas a pas" title="Anar a fer l'aplicació pas a pas" target="_blank">Fer l'aplicació pas a pas</a>.
+                    Se creará una aplicación con el nombre <b>guessOperation</b>. El esqueleto de la aplicación se puede descarregar des del 
+                    <a href="https://github.com/BCNITB/Ionic-excercises/tree/main/exercici-02/guesOperation" title="Ir al repositorio" target="_blank" style="text-decoration: none;">repositorio de bcnitb</a>. En caso 
+                    de que se quiera ver paso a paso cómo crear este esqueleto y todos los pasos hasta este punto, se recomienda la siguiente página web: 
+                    <a href="https://TODO: web pas a pas" title="Ir a hacer la aplicación paso a paso" target="_blank">Hacer la aplicación paso a paso</a>.
                 </p>
                 <div>
-                    <h3>Describint l'aplicació</h3>
+                    <h3>Describiendo la aplicación</h3>
                     <p>
-                        L’aplicació que acabem de descarregar és l’esquelet de la futura aplicació. Per a veure l’aspecte actual de l’aplicació obrirem un terminal i escriurem el 
-                        següent comandament:
+                        La aplicación que acabemos de descargar es el esqueleto de la futura aplicación. Para ver el aspecto actual de la aplicación abriremos un terminal i escribiremos el 
+                        siguiente comando:
                     </p>
                     <div style="width: 100%; background-color: #000; text-align: center;">
                         <code style="font-size: 1.5em; color: white;">
@@ -43,11 +43,11 @@
                         </code>
                     </div>
                     <p>
-                        Al cap d’uns minuts se’ns obrirà el navegador d’internet que tenim per defecte i ens mostrarà l’aplicació com si fos una aplicació web.
+                        Tras unos minutos se obrirá el navegador de internet que tengamos por defecto y se mostrará la aplicación como si fuera una aplicación web.
                     </p>
                     <img src="../img/vista-web-ex02.png" alt="" style="width: 65vw; margin: auto;">
                     <p>
-                        En cas de que vulguem veure la seva experiència a un dispositiu mòbil pitjarem les tecles Control + C i escriurem el següent comandament escriurem:
+                        En caso de que querer verse la experiencia en un dispositivo móvil pulsaremos las teclas Control + C y escribiremos el siguiente comando:
                     </p>
                     <div style="width: 100%; background-color: #000; text-align: center;">
                         <code style="font-size: 1.5em; color: white;">
@@ -55,7 +55,7 @@
                         </code>
                     </div>
                     <p>
-                        Es tornarà a obrir un navegador d’internet però veurem l’aplicació dins d’un terminal iOS i un Android.
+                        Se volverá a abrir un navegador de internet pero veremos la aplicación dentro de un terminal iOS i un Android.
                     </p>
                     <div style="text-align: center;">
                         <img src="../img/vista-mobil-ex02.png" alt="" style="width: 30vw;">
@@ -63,21 +63,21 @@
                 </div>
 
                 <div>
-                    <h3>Conceptes</h3>
+                    <h3>Conceptos</h3>
                     <p>
-                        Si s’obre l’arxiu <b>home.page.html</b>, dins la carpeta <b>src/app/home</b> del projecte, es pot observar el codi en HTML de la vista. En aquest codi 
-                        es pot veure que hi ha una etiqueta d’encapçalament <b>h2</b>, una de paràgraf <b>p</b> i un altre de formulari <b>form</b>, bàsicament. I dins la 
-                        etiqueta de formulari hi ha una <b>label</b> i una d’un camp d’edició <b>ion-input</b>.
+                        Si se abre el archivo <b>home.page.html</b>, de la carpeta <b>src/app/home</b> del proyecto, se puede observar el código en <b>HTML</b> de la vista. En este código 
+                        se puede ver que hay una etiqueta de encabezado <b>&lt;h2&gt;</b>, una de párrafo <b>&lt;p&gt;</b> y ptra de formulario <b>&lt;form&gt;</b>, básicamente. Y dentro la 
+                        etiqueta de formulario hay una <b>&lt;label&gt;</b> y una de un campo de edición <b>&lt;ion-input&gt;</b>.
                     </p>
                 </div>
                 <div>
-                    <h3>Exercici</h3>
+                    <h3>Ejercicio</h3>
                     <p>
-                        Sota de la etiqueta de paràgraf hi ha un comentari amb el text TODO. El que es demana és que es substitueixi aquesta etiqueta per a que el mostri el següent text:
+                        Debajo de la etiqueta de párrafo hay un comentario con el texto <b>TODO</b>. Se pide que se sustituya esta etiqueta para que se muestre el siguiente texto:
                     </p>
-                    <p style="text-align: center;">Segon número:</p>
+                    <p style="text-align: center;">Segundo número:</p>
                     <p>
-                        I un número aleatori que ha de ser diferent del número anterior. El resultat es mostra a la Figura  3.
+                        Y un número aleatori que ha de ser diferente al número anterior. El resultado se muestra en la siguiente figura.
                     </p>
                     <div style="text-align: center;">
                         <img src="../img/vista-ex02.png" alt="" style="width: 30vw;">
@@ -87,14 +87,12 @@
         </article>
 
         <div style="width: 65vw; margin: auto;">
-            <a href="ex01.html" style="text-decoration: none; background-color: blue; color: white; padding: 1vh 2vw; float: left; margin: 2vh 0;" title="Anar a l'exercici anterior">
+            <a href="ex01.html" style="text-decoration: none; background-color: blue; color: white; padding: 1vh 2vw; float: left; margin: 2vh 0;" title="Ir al ejercicio anterior">
                 Anterior
             </a>
         
-
-        
-            <a href="ex03.html" style="text-decoration: none; background-color: blue; color: white; padding: 1vh 2vw; float: right; margin: 2vh 0;" title="Anar a l'exercici següent">
-                Següent
+            <a href="ex03.html" style="text-decoration: none; background-color: blue; color: white; padding: 1vh 2vw; float: right; margin: 2vh 0;" title="Ir al ejercicio siguiente">
+                Siguiente
             </a>
         </div>
     </body>
