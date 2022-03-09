@@ -1,0 +1,21 @@
+{
+    "txt": {
+        "calculate": "¡Calcula!",
+        "header": "Calcula a suma dos seguintes números",
+        "firstNum": "Primeiro número: ",
+        "secondNum": "Segundo número: ",
+        "showedTxt": "N",
+        "hiddenTxt": "úmero",
+        "label-1": "Valor de suma",
+        "resultSentence": "Necesitaches "
+    },
+    "btn": {
+        "check":"Comproba",
+        "restart": "Reiniciar"
+    },
+    "gifs": {
+        "AltTxt_1": "Gaña animación",
+        "AltTxt_2": "Animación de erros",
+        "AltTxt_3": "Animación de Game Over"
+    }
+}

@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-import { Storage } from '@ionic/storage';
-
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -25,11 +23,11 @@ export class HomePage {
   fail:boolean=false;
   
   sound:any;
-
+    
   audio=new Audio();
   audioTime:any;
 
-  constructor(public storage: Storage) {}
+  constructor() {}
 
   randomNum(a, b){
     return Math.round(Math.random() * (b - a) + parseInt(a, 10));
@@ -125,23 +123,5 @@ export class HomePage {
   
     this.check=false;
     this.fail=false;
-  }
-
-  public set(settingName, value){
-    return this.storage.set(`setting:${ settingName }`, value);
-  }
-
-  public async get(settingName){
-    return await this.storage.get(`setting:${ settingName }`);
-  }
-
-  public async remove(settingName){
-    return await this.storage.remove(`setting:${ settingName }`);
-  }
-
-  public clear(){
-    this.storage.clear().then(() => {
-      console.log('all keys cleared');
-    });
   }
 }
