@@ -7,7 +7,8 @@
         "showedTxt": "N",
         "hiddenTxt": "ombre",
         "label-1": "Valor de la suma",
-        "resultSentence": "Has necessitat"
+        "resultSentence": "Has necessitat",
+        "languageChangePlaceholder":"Cambiar idioma"
     },
     "btn": {
         "check":"Comprova",
@@ -17,5 +18,6 @@
         "AltTxt_1": "Animació de victòria",
         "AltTxt_2": "Animació d'error",
         "AltTxt_3": "Animació de Game Over"
-    }
+    },
+    "Language": "Idioma"
 }

@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
 
+//Language
+import { TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+
+  language:string = this.translateService.currentLang;
 
   num:number;
   num1:number = this.randomNum(0,100);
@@ -15,9 +20,18 @@ export class HomePage {
   
   result:string;
   resultArray:string[]=["Resposta correcte", "T'has quedat curt!", "T'has passat de llarg!"];
+  resultArray_en:string[]=["Correct answer", "The input is too short!", "The input is too large!"];
+  resultArray_es:string[]=["Respuesta correcta", "¡Te has quedado corto!", "'Te has pasado de largo!"];
+  resultArray_eu:string[]=["Erantzun zuzena", "motz geratu zara!", "Urrunegi joan zara!"];
+  resultArray_gl:string[]=["Resposta correcta", "Quedaste curto!", "Fuches demasiado lonxe!"];
+
   word:string="";
   msg:string;
   msgArray:string[]=["Quin crack!", "Gairebé perfecte!", "Has de practicar més", "Esforça't més!", "Tot és millorable"];
+  msgArray_en:string[]=["What acrack!", "Almost perfect!", "You have to practice more", "Work harder!", "Everything can be improved"];
+  msgArray_es:string[]=["Quin crack!", "¡Casi perfecto!", "Has de practicar más", "Esfuérzate más!", "Todo es mejorable"];
+  msgArray_eu:string[]=["Zer pitzadura!", "La perfektua!", "Gehiago praktikatu behar duzu", "Lan gehiago egin!", "Dena hobetu daiteke"];
+  msgArray_gl:string[]=["Qe crack!", "Case perfecte!", "Tes que practicar máis", "Traballa máis!", "Todo se pode mellorar"];
 
   check:boolean=false;
   fail:boolean=false;
@@ -27,13 +41,19 @@ export class HomePage {
   audio=new Audio();
   audioTime:any;
 
-  constructor() {}
+  constructor(private translateService: TranslateService) {}
+
+  languageChange(){
+    this.translateService.use(this.language);
+  }
 
   randomNum(a, b){
     return Math.round(Math.random() * (b - a) + parseInt(a, 10));
   }
 
   checkAnswer(){
+    let tempArray:string[];
+
     this.calculateSum();
 
     if(this.sum == this.num){

@@ -7,7 +7,8 @@
         "showedTxt": "N",
         "hiddenTxt": "umber",
         "label-1": "Sum value",
-        "resultSentence": "You have needed "
+        "resultSentence": "You have needed ",
+        "languageChangePlaceholder":"Change language"
     },
     "btn": {
         "check":"Check",
@@ -17,5 +18,6 @@
         "AltTxt_1": "Victory animation",
         "AltTxt_2": "Mistake animation",
         "AltTxt_3": "Game Over animation"
-    }
+    },
+    "Language": "Language"
 }

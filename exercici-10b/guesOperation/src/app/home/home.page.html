@@ -3,6 +3,17 @@
     <ion-title>
       {{ 'txt.calculate' | translate }}
     </ion-title>
+
+    <ion-item>
+      <ion-label for="selecLanguage" translate>Language</ion-label>
+      <ion-select [(ngModel)]="language" (ionChange)="languageChange()" [placeholder]='"txt.languageChangePlaceholder" | translate'>
+        <ion-select-option value="ca">Català</ion-select-option>
+        <ion-select-option value="en">English</ion-select-option>
+        <ion-select-option value="es">Castellano</ion-select-option>
+        <ion-select-option value="eu">Euskera</ion-select-option>
+        <ion-select-option value="gl">Galego</ion-select-option>       
+      </ion-select>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 

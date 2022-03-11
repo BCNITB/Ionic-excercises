@@ -7,7 +7,8 @@
         "showedTxt": "Z",
         "hiddenTxt": "enbakia",
         "label-1": "Batura balioa",
-        "resultSentence": "Behar al duzu "
+        "resultSentence": "Behar al duzu ",
+        "languageChangePlaceholder":"hizkuntza aldatu"
     },
     "btn": {
         "check":"Egiaztatu",
@@ -17,5 +18,6 @@
         "AltTxt_1": "Irabazi animazioa",
         "AltTxt_2": "Akatsen animazioa",
         "AltTxt_3": "Animazioa baino gehiago jokoa"
-    }
+    },
+    "Language": "Hizkuntza"
 }
