@@ -28,10 +28,12 @@ export class HomePage {
   word:string="";
   msg:string;
   msgArray:string[]=["Quin crack!", "Gairebé perfecte!", "Has de practicar més", "Esforça't més!", "Tot és millorable"];
-  msgArray_en:string[]=["What acrack!", "Almost perfect!", "You have to practice more", "Work harder!", "Everything can be improved"];
+  msgArray_en:string[]=["What a crack!", "Almost perfect!", "You have to practice more", "Work harder!", "Everything can be improved"];
   msgArray_es:string[]=["Quin crack!", "¡Casi perfecto!", "Has de practicar más", "Esfuérzate más!", "Todo es mejorable"];
   msgArray_eu:string[]=["Zer pitzadura!", "La perfektua!", "Gehiago praktikatu behar duzu", "Lan gehiago egin!", "Dena hobetu daiteke"];
   msgArray_gl:string[]=["Qe crack!", "Case perfecte!", "Tes que practicar máis", "Traballa máis!", "Todo se pode mellorar"];
+  msgSingular:string[]=["intent", "attempt", "intento", "saiatu", "intentou"];
+  msgPlural:string[]=["intents", "attempts", "intentos", "saiakerak", "intentos"];
 
   check:boolean=false;
   fail:boolean=false;
@@ -53,24 +55,71 @@ export class HomePage {
 
   checkAnswer(){
     let tempArray:string[];
+    let msgTempArray:string[];
+    
+    let msg:number;
+
+    switch(this.language){
+      case 'ca':
+        tempArray=this.resultArray;
+        msgTempArray=this.msgArray;
+        msg=0;
+
+        break;
+        
+      case 'en':
+        tempArray=this.resultArray_en;
+        msgTempArray=this.msgArray_en;
+        msg=1;
+
+        break;
+
+      case 'es':
+        tempArray=this.resultArray_es;
+        msgTempArray=this.msgArray_es;
+        msg=2;
+        
+        break;
+
+      case 'eu':
+        tempArray=this.resultArray_eu;
+        msgTempArray=this.msgArray_eu;
+        msg=3;
+        
+        break;
+
+      case 'gl':
+        tempArray=this.resultArray_gl;
+        msgTempArray=this.msgArray_gl;
+        msg=4;
+        
+        break;
+
+      default:
+        tempArray=this.resultArray;
+        msgTempArray=this.msgArray;
+        msg=0;
+        
+        break;
+    }
 
     this.calculateSum();
 
     if(this.sum == this.num){
-      this.result=this.resultArray[0];
+      this.result=tempArray[0];
       this.check=true;
       this.fail=false;
       this.sound="../../assets/sounds/correct.mp3";
       ++this.count;
     }
     else if(this.sum > this.num){
-      this.result=this.resultArray[1];
+      this.result=tempArray[1];
       this.fail=true;
       this.sound="../../assets/sounds/fail.mp3";
       ++this.count;
     }
     else if(this.sum < this.num){
-      this.result=this.resultArray[2];
+      this.result=tempArray[2];
       this.fail=true;
       this.sound="../../assets/sounds/fail.mp3";
       ++this.count;
@@ -79,27 +128,27 @@ export class HomePage {
     this.play(this.sound);
 
     if(this.count>1){
-      this.word="intents";
+      this.word=this.msgPlural[msg];
     }
     else{
-      this.word="intent";
+      this.word=this.msgSingular[msg];
     }
 
     switch(this.count){
       case 1:
-        this.msg=this.msgArray[0];
+        this.msg=msgTempArray[0];
         break;
       case 2:
-        this.msg=this.msgArray[1];
+        this.msg=msgTempArray[1];
         break;
         case 3:
-          this.msg=this.msgArray[2];
+          this.msg=msgTempArray[2];
           break;
           case 4:
-            this.msg=this.msgArray[3];
+            this.msg=msgTempArray[3];
             break;
           case 5:
-            this.msg=this.msgArray[4];
+            this.msg=msgTempArray[4];
             break;
       default:
         this.msg="oooops!";
