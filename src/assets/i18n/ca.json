@@ -1,0 +1,24 @@
+{
+    "txt": {
+        "calculate": "Calcula!",
+        "header": "Calcula la suma dels següents números",
+        "firstNum": "Primer número: ",
+        "secondNum": "Segon número: ",
+        "showedTxt": "N",
+        "hiddenTxt": "ombre",
+        "label-1": "Valor de la suma",
+        "resultSentence": "Has necessitat",
+        "languageChangePlaceholder": "Canviar didioma"
+    },
+    "btn": {
+        "check":"Comprova",
+        "restart": "Reiniciar"
+    },
+    "gifs": {
+        "AltTxt_1": "Animació de victòria",
+        "AltTxt_2": "Animació d'error",
+        "AltTxt_3": "Animació de Game Over"
+    },
+
+    "Language": "Idioma"
+}

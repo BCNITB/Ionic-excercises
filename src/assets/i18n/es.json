@@ -1,0 +1,24 @@
+{
+    "txt": {
+        "calculate": "!Calcula!",
+        "header": "Calcula la suma de los siguientes números",
+        "firstNum": "Primer número: ",
+        "secondNum": "Segundo número: ",
+        "showedTxt": "N",
+        "hiddenTxt": "úmero",
+        "label-1": "Valor de la suma",
+        "resultSentence": "Has necesitado",
+        "languageChangePlaceholder": "Cambiar idioma"
+    },
+    "btn": {
+        "check":"Comprueba",
+        "restart": "Reiniciar"
+    },
+    "gifs": {
+        "AltTxt_1": "Animación de victoria",
+        "AltTxt_2": "Animación de error",
+        "AltTxt_3": "Animación de Game Over"
+    },
+
+    "Language": "Idioma"
+}
